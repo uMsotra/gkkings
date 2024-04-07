@@ -1,0 +1,27 @@
+/* Add crazy background animation */
+
+body {
+    overflow: hidden; /* Prevent scrollbars due to large background */
+    position: relative;
+}
+
+.crazy-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Move it behind other elements */
+    animation: animateCrazyBackground 5s linear infinite alternate; /* Adjust animation duration and timing */
+    background: linear-gradient(45deg, #ffbf00, #ff0080, #8000ff, #00bfff, #00ff80, #ffff00); /* Gradient background with crazy colors */
+    background-size: 1200% 1200%; /* Increase background size for smooth animation */
+}
+
+@keyframes animateCrazyBackground {
+    0% {
+        background-position: 0% 0%; /* Start position */
+    }
+    100% {
+        background-position: 100% 100%; /* End position */
+    }
+}

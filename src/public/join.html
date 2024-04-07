@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GK Session Host</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/background.css">
+    <link rel="stylesheet" href="styles/host.css"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/hammerjs"></script>
+    <style>
+        /* Style the start session button */
+#join-session-btn {
+    background-color: #00aaff; /* Blue */
+    color: white;
+    padding: 30px 60px;
+    font-size: 28px;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: background-color 0.3s;
+    box-shadow: 0px 5px 15px rgba(0, 170, 255, 0.4); /* Soft shadow */
+}
+
+#join-session-btn:hover {
+    background-color: #0088cc; /* Darker blue on hover */
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <div id="logo">
+            <img src="assets/logos/png/logo-no-background.png" alt="GK Kings Logo">
+        </div>
+    </header>
+
+    <div id="session-form">
+        <form id="gk-join-form">
+            <input type="text" id="session-name" name="session-name" placeholder="Enter Session Name" maxlength="11" required>
+            <button type="submit" id="join-session-btn">Join Session</button>
+        </form>
+    </div>
+
+    <div class="crazy-background"></div>
+    <script src="scripts/background.js"></script> 
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-auth.js"></script>
+    <script src="scripts/join.js"></script> 
+</body>
+
+<footer id="menu-bar">
+    <div class="menu-item">
+        <a href="index.html"><i class="fas fa-home"></i></a> 
+    </div>
+    <div class="menu-item">
+        <a href="#"><i class="fab fa-facebook"></i></a> 
+    </div>
+    <div class="menu-item">
+        <a href="#"><i class="fab fa-twitter"></i></a>
+    </div>
+</footer>
+</html>

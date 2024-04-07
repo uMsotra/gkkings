@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GK Kings - General Knowledge Game</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/loading.css">
+    <link rel="stylesheet" href="styles/how-to-play.css">
+    <link rel="stylesheet" href="styles/background.css"> <!-- Updated CSS file -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/hammerjs"></script>
+</head>
+<body>
+    <div id="loading-screen">
+        <div id="loading-logo">
+            <img src="assets/logos/png/logo-no-background.png" alt="GK Kings Logo">
+        </div>
+
+    </div>
+
+    <header>
+        <div id="logo">
+            <img src="assets/logos/png/logo-no-background.png" alt="GK Kings Logo">
+        </div>
+    </header>
+
+    <div id="content">
+        <!-- Main content of the game (welcome screen, game screen, etc.) goes here -->
+        <div id="welcome-screen">
+            <div id="instructions-slider">
+                <div class="instruction-card active">
+                    <h2 class="instruction-title">How to Play</h2>
+                    <p class="instruction-content">Welcome to GK Kings, a general knowledge game where you can test your knowledge in various categories!</p>
+                </div>
+                <div class="instruction-card">
+                    <h2 class="instruction-title">Step 1</h2>
+                    <p class="instruction-content">One player becomes the King and hosts the game session. The King doesn't play but manages the game.</p>
+                </div>
+                <div class="instruction-card">
+                    <h2 class="instruction-title">Step 2</h2>
+                    <p class="instruction-content">Aspiring players join the game session created by the King.</p>
+                </div>
+                <div class="instruction-card">
+                    <h2 class="instruction-title">Step 3</h2>
+                    <p class="instruction-content">The King sets the category (e.g., animals, cars) and the starting letter for answers (e.g., "K" for animals, "Z" for cars).</p>
+                </div>
+                <div class="instruction-card">
+                    <h2 class="instruction-title">Step 4</h2>
+                    <p class="instruction-content">Players submit their answers within the specified time limit, ensuring they match the category and starting letter provided by the King.</p>
+                </div>
+                <div class="instruction-card">
+                    <h2 class="instruction-title">Step 5</h2>
+                    <p class="instruction-content">The King assigns points for correct answers and manages the game flow.</p>
+                </div>
+                <div class="instruction-card">
+                    <h2 class="instruction-title">Step 6</h2>
+                    <p class="instruction-content">The player with the highest score becomes the new King and hosts the next game session.</p>
+                </div>
+                
+            </div>
+
+            <div id="buttons">
+                <button class="host-button">
+                    <a href="host.html" style="text-decoration: none; color: inherit;">Host</a>
+                </button>
+                
+                <button class="join-button">
+                    <a href="join.html" style="text-decoration: none; color: inherit;">Join</a>
+                </button>
+                
+            </div>
+            
+        </div>
+
+        <div id="game-screen" style="display: none;"></div>
+    </div>
+    <div class="crazy-background"></div>
+
+    <script src="scripts/loading.js"></script>
+    <script src="scripts/script.js"></script>
+    
+    <!-- JavaScript for Floating Icons Animation -->
+    <script src="scripts/background.js"></script> <!-- Renamed JS file -->
+    
+    <footer id="menu-bar">
+        <div class="menu-item">
+            <a href="#"><i class="fas fa-home"></i></a> <!-- Home icon -->
+        </div>
+        <div class="menu-item">
+            <a href="#"><i class="fab fa-facebook"></i></a> <!-- Facebook link -->
+        </div>
+        <div class="menu-item">
+            <a href="#"><i class="fab fa-twitter"></i></a> <!-- Twitter link -->
+        </div>
+    
+    </footer>
+    
+</body>
+
+
+</html>

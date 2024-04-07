@@ -1,0 +1,104 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+#logo img {
+    width: 200px;
+    height: auto;
+    animation: pulse 2s infinite; /* Adjust animation duration as needed */
+}
+
+#content {
+    text-align: center;
+    margin-top: 50px;
+}
+
+#buttons {
+    margin-top: 50px; /* Add space between buttons and how-to section */
+    display: flex;
+    justify-content: center;
+}
+
+#buttons button {
+    padding: 20px 40px; /* Enlarging the buttons */
+    margin: 0 20px; /* Add space between buttons */
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+    font-size: 24px; /* Adjusted font size for better visibility */
+    transition: background-color 0.3s, transform 0.3s; /* Added transform transition */
+    display: inline-block;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* Add shadow for button tiles effect */
+}
+
+.host-button {
+    background-color: #4CAF50; /* Green color for hosting */
+    color: white;
+}
+
+.join-button {
+    background-color: #007bff; /* Blue color for joining */
+    color: white;
+}
+
+#buttons button:hover {
+    opacity: 0.8;
+    transform: scale(1.05); /* Added button scale on hover */
+}
+
+
+body {
+    position: relative;
+    min-height: 100vh; /* Ensure the footer stays at the bottom */
+}
+
+#content {
+    padding-bottom: 100px; /* Adjust according to the height of the footer */
+}
+
+#menu-bar {
+    background-color: #fff;
+    padding: 10px 0;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.menu-item {
+    margin: 0 10px;
+}
+
+.menu-item a {
+    text-decoration: none;
+    color: #333;
+    font-size: 24px;
+}
+
+.menu-item a:hover {
+    color: #007bff; /* Adjust hover color as needed */
+}
+
+

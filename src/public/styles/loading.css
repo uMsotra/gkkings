@@ -1,0 +1,37 @@
+body {
+    /* Keep the background visible */
+}
+
+#loading-screen {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: transparent; /* Remove black background */
+}
+
+#loading-logo img {
+    width: 300px; /* Adjust size as needed */
+    height: auto;
+    animation: pulse 1.5s infinite alternate;
+}
+
+.loading-message {
+    font-size: 24px;
+    margin-top: 20px;
+    color: #fff; /* White text */
+    animation: ellipsis 1s infinite;
+}
+
+@keyframes pulse {
+    from { transform: scale(1); }
+    to { transform: scale(1.1); }
+}
+
+@keyframes ellipsis {
+    0% { content: "."; }
+    33% { content: ".."; }
+    66% { content: "..."; }
+    100% { content: ""; }
+}

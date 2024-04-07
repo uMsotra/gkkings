@@ -1,0 +1,36 @@
+/* styles/styles.css */
+
+/* Center the session form */
+#session-form {
+    text-align: center;
+    margin-top: 100px; /* Adjust as needed */
+}
+
+/* Style the session name input */
+#session-name {
+    width: 70%; /* Adjust width as needed */
+    padding: 20px;
+    font-size: 24px;
+    margin-bottom: 30px;
+    border: none;
+    background-color: #333; /* Dark background */
+    color: #fff; /* White text */
+    border-radius: 10px;
+}
+
+/* Style the start session button */
+#start-session-btn {
+    background-color: #00aaff; /* Blue */
+    color: white;
+    padding: 30px 60px;
+    font-size: 28px;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: background-color 0.3s;
+    box-shadow: 0px 5px 15px rgba(0, 170, 255, 0.4); /* Soft shadow */
+}
+
+#start-session-btn:hover {
+    background-color: #0088cc; /* Darker blue on hover */
+}
