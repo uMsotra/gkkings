@@ -15,15 +15,38 @@
         <div id="logo">
             <img src="assets/logos/png/logo-no-background.png" alt="GK Kings Logo">
         </div>
-        <div id="session-info">
-
+        <div id="session-info-container">
+            <div id="session-name-container">
+                <p id="session-name"></p>
+            </div>
         </div>
     </header>
-
+    
     <div id="content">
-        
+        <div id="session-info">
+            <!-- Session name -->
 
-        
+
+            <!-- Input field for entering category -->
+            <input type="text" maxlength="15" id="category-input" placeholder="Enter category">
+            <!-- Button to add category to the list -->
+            <button id="add-category-btn">Add</button>
+            <!-- Add a container for the floating elements -->
+            <div id="floating-container">
+                <!-- Buttons for selecting letters -->
+                <div id="letter-buttons">
+                    <!-- Generate buttons from A to Z dynamically -->
+                                    <!-- Generate buttons from A to Z dynamically -->
+                <button id="start-game-btn">Start Game</button>
+                </div>
+                <!-- List to display added categories -->
+                <ul id="category-list"></ul>
+            </div>
+
+
+        </div>
+
+
     </div>
 
     <footer id="menu-bar">
@@ -36,6 +59,8 @@
         <div class="menu-item">
             <a href="#"><i class="fab fa-twitter"></i></a> <!-- Twitter link -->
         </div>
+        <!-- Button to start the game -->
+
     </footer>
     <div class="crazy-background"></div>
 
