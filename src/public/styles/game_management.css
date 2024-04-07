@@ -1,21 +1,139 @@
-/* game_management.css */
+/* Styling for buttons */
+button {
+  padding: 12px 20px; /* Adjust padding */
+  font-size: 16px; /* Increase font size */
+  border-radius: 8px; /* Add border-radius for rounded corners */
+  cursor: pointer;
+  background-color: #4CAF50; /* Green background */
+  color: #fff; /* White text color */
+  border: none; /* Remove border */
+  transition: background-color 0.3s ease; /* Smooth transition */
+  margin-bottom: 10px; /* Add margin bottom for spacing */
+}
 
-/* Add session name styling */
+button:hover {
+  background-color: #45a049; /* Darker green on hover */
+}
 
-.session-name-container {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    padding: 10px 15px; /* Add padding for spacing */
-    background-color: rgba(0, 0, 0, 0.1); /* Semi-transparent background */
-    border-radius: 5px; /* Rounded corners */
+/* Styling for session info */
+#session-info-container {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+#session-name-container {
+  background-color: #f0f0f0; /* Greyish background */
+  padding: 10px 20px;
+  border-radius: 10px;
+}
+
+#session-name {
+  margin: 0;
+  font-size: 18px; /* Increase font size */
+  color: #333; /* Dark text color */
+}
+
+/* Styling for input field */
+#category-input {
+  padding: 12px; /* Adjust padding */
+  font-size: 16px; /* Increase font size */
+  border: 2px solid #ccc; /* Add border */
+  border-radius: 8px; /* Add border radius */
+  margin-bottom: 10px; /* Add margin bottom for spacing */
+  width: 300px; /* Set input width */
+}
+
+/* Styling for add category button */
+#add-category-btn {
+  padding: 12px 20px; /* Adjust padding */
+  font-size: 16px; /* Increase font size */
+  border-radius: 8px; /* Add border radius */
+  background-color: #2196F3; /* Blue background */
+  color: #fff; /* White text color */
+  border: none; /* Remove border */
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Smooth transition */
+  margin-left: 10px; /* Add margin left for spacing */
+}
+
+#add-category-btn:hover {
+  background-color: #0b7dda; /* Darker blue on hover */
+}
+
+/* Styling for category list */
+#category-list {
+  list-style-type: none; /* Remove default list style */
+  padding: 0; /* Remove default padding */
+}
+
+#category-list li {
+  background-color: #2196F3; /* Blue background */
+  color: #fff; /* White text color */
+  padding: 12px 20px;
+  margin: 5px;
+  border-radius: 20px;
+}
+
+/* Styling for floating elements */
+.floating-element {
+  position: absolute;
+  animation: floatBubble 10s infinite linear; /* Float animation */
+}
+
+/* Keyframes for floatBubble animation */
+@keyframes floatBubble {
+  0% {
+    transform: translateY(0);
   }
-  
-  .session-name {
-    font-family: Arial, sans-serif; /* Choose a futuristic font */
-    font-style: italic; /* Italicize the text */
-    font-size: 18px; /* Adjust font size as needed */
-    color: #888; /* Set a gray color */
-    margin: 0; /* Remove default margin */
+  50% {
+    transform: translateY(-50px);
   }
-  
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* Styling for start game button */
+#start-game-btn {
+  padding: 12px 40px; /* Adjust padding */
+  font-size: 18px; /* Increase font size */
+  border-radius: 8px; /* Add border radius */
+  background-color: #FFC107; /* Yellow background */
+  color: #333; /* Dark text color */
+  border: none; /* Remove border */
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Smooth transition */
+  margin-top: 20px; /* Add margin top for spacing */
+}
+
+#start-game-btn:hover {
+  background-color: #e0a800; /* Darker yellow on hover */
+}
+/* Styling for content */
+#content {
+  max-width: 800px; /* Adjust max-width as needed */
+  margin: 0 auto; /* Center content horizontally */
+  padding: 20px; /* Add padding */
+  height: calc(100vh - 150px); /* Set height for content area */
+  overflow-y: auto; /* Enable vertical scroll */
+}
+
+/* Styling for floating elements */
+.floating-element {
+  position: absolute;
+  animation: floatBubble 10s infinite linear; /* Float animation */
+}
+
+/* Keyframes for floatBubble animation */
+@keyframes floatBubble {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-50px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
