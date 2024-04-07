@@ -1,4 +1,5 @@
-const firebaseConfig = {
+document.addEventListener('DOMContentLoaded', function() {
+  const firebaseConfig = {
     apiKey: "AIzaSyDkCWyDANV53vHNLC68Kfwq94T3THPx-TA",
     authDomain: "gkkingmakers.firebaseapp.com",
     databaseURL: "https://gkkingmakers-default-rtdb.asia-southeast1.firebasedatabase.app",
@@ -9,20 +10,15 @@ const firebaseConfig = {
     measurementId: "G-TR70V2T8N3"
   };
   
-  
+  firebase.initializeApp(firebaseConfig);
+  const database = firebase.database();
 
-
-firebase.initializeApp(firebaseConfig);
-const database = firebase.database();
-
-document.addEventListener('DOMContentLoaded', function() {
-  // Get session ID from URL query parameters
   const urlParams = new URLSearchParams(window.location.search);
   const sessionId = urlParams.get('sessionId');
 
   if (sessionId) {
-      // Fetch session details from Firebase
       const sessionRef = database.ref('sessions/' + sessionId);
+
       sessionRef.once('value', function(snapshot) {
           const sessionData = snapshot.val();
           if (sessionData) {
@@ -36,8 +32,6 @@ document.addEventListener('DOMContentLoaded', function() {
               const addCategoryBtn = document.getElementById('add-category-btn');
               // List to display added categories
               const categoryList = document.getElementById('category-list');
-              // Button to start the game
-              const startGameBtn = document.getElementById('start-game-btn');
 
               // Button click event to add category
               addCategoryBtn.addEventListener('click', function() {
@@ -57,6 +51,7 @@ document.addEventListener('DOMContentLoaded', function() {
               });
 
               // Button click event to start the game
+              const startGameBtn = document.getElementById('start-game-btn');
               startGameBtn.addEventListener('click', function() {
                   // Get selected letter and category list
                   const selectedLetter = document.querySelector('.selected-letter').textContent;
@@ -68,11 +63,15 @@ document.addEventListener('DOMContentLoaded', function() {
                   // Save selected letter and category list to Firebase
                   sessionRef.update({
                       selectedLetter: selectedLetter,
-                      categories: categories
+                      categories: categories,
+                      gameStarted: true // Update gameStarted to true
+                  }).then(function() {
+                      console.log('Game started');
+                      console.log('Selected letter:', selectedLetter);
+                      console.log('Categories:', categories);
+                  }).catch(function(error) {
+                      console.error('Error starting game:', error);
                   });
-
-                  console.log('Selected letter:', selectedLetter);
-                  console.log('Categories:', categories);
               });
 
               // Generate buttons from A to Z dynamically
